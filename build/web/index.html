@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <style>
+
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            body {
+                padding: 150px;
+                display: flex;
+                justify-content: center;
+                text-align: center;
+                align-items: center;
+                font-size: 30px;
+                 text-shadow: 2px 2px 5px rgb(67, 67, 67);
+
+            }
+
+            button{
+                text-shadow: 2px 2px 4px rgb(79, 78, 78);
+                border-radius: 5px;
+                background: linear-gradient(to top,rgb(158, 158, 158),rgb(224, 220, 220));
+                font-size: 80%;
+                height: 30px;
+                width: 100px;
+            }
+
+
+            input[type="text"] {
+                background: linear-gradient(to bottom,rgb(129, 128, 128),rgb(207, 204, 204),rgb(226, 225, 225));
+                text-shadow: 1px 2px 2px gray;
+                font-size: 80%;
+                border-radius: 10px;
+                height: 25px;
+            }
+
+            input[type="submit"] {
+                text-shadow: 2px 2px 4px rgb(79, 78, 78);
+                border-radius: 5px;
+                background: linear-gradient(to top,rgb(158, 158, 158),rgb(224, 220, 220));
+                font-size: 80%;
+                height: 30px;
+                width: 100px;
+            }
+
+            input[type="reset"] {
+                text-shadow: 2px 2px 4px rgb(79, 78, 78);
+                border-radius: 5px;
+                background: linear-gradient(to top,rgb(158, 158, 158),rgb(224, 220, 220));
+                font-size: 80%;
+                height: 30px;
+                width: 100px;
+            }
+
+            #d1{
+                background: linear-gradient(to bottom, rgb(249, 154, 29), rgb(233, 174, 98), rgb(240, 206, 160));
+                background-color: antiquewhite;
+                border: 2px solid black;
+                width: 400px;
+                padding: 30px 5px 0 0;
+                height: 250px;
+                border-radius: 20px;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <div id="d1">
+
+
+            <form action="MyPassWordServlet" method="get"  onsubmit="return tr()">
+
+                Enter Password :<input type="text" name="t1" size="20"><br><br>
+                <input type="hidden" name="pass" value="save">
+                <input type="reset">
+                <input type="submit" ><br><br>
+            </form>
+            <a href="forgot.html"><button>Forgot</button></a>
+        </div>
+
+        <script>
+
+            let SavePoint;
+            let y = document.getElementsByName("t1");
+            let mypass = document.getElementsByName("pass");
+
+//            function MySave() {
+//                SavePoint = y[0].value;
+//               
+//             
+//
+//            }
+
+            function tr() {
+                if (y[0].value == "") {
+                    alert("Keep Fill The Box......!");
+                    return false
+                }
+//                if (SavePoint == y[0].value) {
+//                    return true
+//                } else {
+//                    alert("Incorrect PassWord...!")
+//                    return false
+//                }
+            }
+        </script>
+    </body>
+
+</html>

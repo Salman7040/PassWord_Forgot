@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <style>
+
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            body {
+                padding: 150px;
+                display: flex;
+                justify-content: center;
+                text-align: center;
+                align-items: center;
+                font-size: 30px;
+                 text-shadow: 2px 2px 5px rgb(67, 67, 67);
+
+            }
+
+
+            input[type="button"]{
+                text-shadow: 2px 2px 4px rgb(79, 78, 78);
+                border-radius: 5px;
+                background: linear-gradient(to top,rgb(158, 158, 158),rgb(224, 220, 220));
+                font-size: 80%;
+                height: 30px;
+                width: 100px;
+
+            }
+
+            input[type="text"] {
+                background: linear-gradient(to bottom,rgb(129, 128, 128),rgb(207, 204, 204),rgb(226, 225, 225));
+                text-shadow: 1px 2px 2px gray;
+                font-size: 80%;
+                border-radius: 10px;
+                height: 25px;
+            }
+
+
+
+            input[type="reset"] {
+                text-shadow: 2px 2px 4px rgb(79, 78, 78);
+                border-radius: 5px;
+                background: linear-gradient(to top,rgb(158, 158, 158),rgb(224, 220, 220));
+                font-size: 80%;
+                height: 30px;
+                width: 100px;
+            }
+            input[type="Submit"] {
+                text-shadow: 2px 2px 4px rgb(79, 78, 78);
+                border-radius: 5px;
+                background: linear-gradient(to top,rgb(158, 158, 158),rgb(224, 220, 220));
+                font-size: 80%;
+                height: 30px;
+                width: 100px;
+            }
+
+            form {
+                background: linear-gradient(to bottom, rgb(249, 154, 29), rgb(233, 174, 98), rgb(240, 206, 160));
+                background-color: antiquewhite;
+                border: 2px solid black;
+                width: 400px;
+                padding: 30px 5px 0 0;
+                height: 250px;
+                border-radius: 20px;
+
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <form action="MyPassWordServlet" onsubmit="return True_False()">
+            Enter  PassWord  :<input type="text" name="t1" size="20"><br><br>
+            Enter Confirm PassWord  :<input type="text" name="t2" size="20"><br><br>
+            <input type="hidden" name="pass" value="forgot" >
+            <a href="index.html"><input type="button" value="BACK"></a>
+            <input type="reset">   
+            <input type="Submit">   
+        </form>
+
+        <script>
+
+            let SavePoint;
+            let y = document.getElementsByName("t1");
+            let x = document.getElementsByName("t2");
+            let mypass = document.getElementsByName("pass");
+
+
+            function True_False() {
+                if (y[0].value == "" || x[0].value == "") {
+                    alert("Keep Fill The Box......!")
+                    return false
+                }
+
+                if (y[0].value == x[0].value) {
+                    return true;
+                } else {
+                    alert("PassWord Not Match....");
+                    return false;
+
+                }
+            }
+        </script>
+    </body>
+
+</html>
